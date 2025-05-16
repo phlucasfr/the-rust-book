@@ -7,4 +7,22 @@ fn main() {
 
         // do stuff with s
     } // this scope is now over, and s is no longer valid
+
+    let mut s = String::from("hello");
+
+    s.push_str(", world!"); // push_str() appends a literal to a String
+
+    println!("{s}");
+
+    {
+        let s = String::from("hello"); // s is valid from this point forward
+        println!("{s}");
+
+        // do stuff with s
+    } // this scope is now over, and s is no
+    // longer valid
+
+    let x = 5;
+    let y = x;
+    println!("{y}")
 }
