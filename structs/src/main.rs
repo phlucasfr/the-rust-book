@@ -5,7 +5,19 @@ struct User {
     sign_in_count: u64,
 }
 
+struct Color(i32, i32, i32);
+struct Point(i32, i32, i32);
+
+struct AlwaysEqual;
+
 fn main() {
+    let black = Color(0, 0, 0);
+    let origin = Point(0, 0, 0);
+
+    let Point(x, y, z) = origin;
+
+    let subject = AlwaysEqual;
+
     let mut user1 = User {
         active: true,
         username: String::from("phlucasfr"),
