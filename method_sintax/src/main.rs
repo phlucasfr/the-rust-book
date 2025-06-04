@@ -8,6 +8,10 @@ impl Rectangle {
     fn area(&self) -> u32 {
         self.width * self.heigth
     }
+
+    fn width(&self) -> bool {
+        self.width > 0
+    }
 }
 
 fn main() {
@@ -20,4 +24,8 @@ fn main() {
         "The area of the rectangle is {} square pixels.",
         rect1.area()
     );
+
+    if rect1.width() {
+        println!("The rectangle has a nonzero width; it is {}", rect1.width);
+    }
 }
