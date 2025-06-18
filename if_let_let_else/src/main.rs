@@ -51,14 +51,42 @@ fn main() {
     }
 }
 
+// fn describe_state_quarter(coin: Coin) -> Option<String> {
+//     if let Coin::Quarter(state) = coin {
+//         if state.existed_in(1900) {
+//             Some(format!("{state:?} is pretty old, for America!"))
+//         } else {
+//             Some(format!("{state:?} is relatively new!"))
+//         }
+//     } else {
+//         None
+//     }
+// }
+
+// Using if let to produce a value or return early.
+// fn describe_state_quarter(coin: Coin) -> Option<String> {
+//     let state = if let Coin::Quarter(state) = coin {
+//         state
+//     } else {
+//         return None;
+//     };
+
+//     if state.existed_in(1900) {
+//         Some(format!("{state:?} is pretty old, for America!"))
+//     } else {
+//         Some(format!("{state:?} is relatively new!"))
+//     }
+// }
+
+// Using let...else to clarify the flow through the function.
 fn describe_state_quarter(coin: Coin) -> Option<String> {
-    if let Coin::Quarter(state) = coin {
-        if state.existed_in(1900) {
-            Some(format!("{state:?} is pretty old, for America!"))
-        } else {
-            Some(format!("{state:?} is relatively new!"))
-        }
+    let Coin::Quarter(state) = coin else {
+        return None;
+    };
+
+    if state.existed_in(1900) {
+        Some(format!("{state:?} is pretty old, for America!"))
     } else {
-        None
+        Some(format!("{state:?} is relatively new."))
     }
 }
