@@ -14,6 +14,12 @@ mod front_of_house {
 mod back_of_house {
     use std::string;
 
+    // enum have all fields public if use 'pub' modificator
+    pub enum Appetizer {
+        Soup,
+        Salad,
+    }
+
     pub struct Breakfast {
         pub toast: String,
         seasonal_fruit: String,
@@ -43,7 +49,10 @@ pub fn eat_at_restaurant() {
 
     let mut meal = back_of_house::Breakfast::summer("Rye");
     meal.toast = String::from("Wheat");
-    println!("I'd like {} toast please", meal.toast)
+    println!("I'd like {} toast please", meal.toast);
+
+    let order1 = back_of_house::Appetizer::Salad;
+    let order2 = back_of_house::Appetizer::Soup;
 }
 
 // crate
