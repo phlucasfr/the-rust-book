@@ -1,4 +1,14 @@
 use crate::front_of_house::hosting;
+use std::fmt;
+use std::io as IoResult;
+
+// fn function1() -> Result {
+    
+// }
+
+// fn function1() -> IoResult<()> {
+    
+// }
 
 mod front_of_house {
     pub mod hosting {
