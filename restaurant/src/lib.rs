@@ -1,4 +1,4 @@
-use crate::front_of_house::hosting;
+pub use crate::front_of_house::hosting;
 use std::fmt;
 use std::io as IoResult;
 
