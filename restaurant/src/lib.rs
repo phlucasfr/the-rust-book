@@ -1,4 +1,3 @@
-pub use crate::front_of_house::hosting;
 use std::fmt;
 use std::io as IoResult;
 
@@ -10,18 +9,8 @@ use std::io as IoResult;
     
 // }
 
-mod front_of_house {
-    pub mod hosting {
-        pub fn add_to_waitlist() {}
-        fn seat_at_table() {}
-    }
-
-    mod serving {
-        fn take_order() {}
-        fn serve_order() {}
-        fn take_payment() {}
-    }
-}
+mod front_of_house;
+pub use crate::front_of_house::hosting;
 
 mod back_of_house {
     use std::string;
