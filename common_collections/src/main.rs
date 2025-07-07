@@ -1,4 +1,5 @@
 use core::num;
+use std::fmt::Debug;
 
 fn main() {
     let mut v: Vec<i32> = Vec::new();
@@ -34,6 +35,23 @@ fn main() {
     for i in &mut v  {
         *i += 50;
         println!("{i}");
+    }
+
+    #[derive(Debug)]
+    enum SpreadsheetCell {
+        Int(i32),
+        Float(f64),
+        Text(String),
+    }
+
+    let row = vec![
+        SpreadsheetCell::Int(3),
+        SpreadsheetCell::Float(10.12),
+        SpreadsheetCell::Text(String::from("blue")),
+    ];
+
+    for i in &row {
+        println!("{:?}", i)
     }
 
 }
