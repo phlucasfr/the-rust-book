@@ -54,4 +54,13 @@ fn main() {
         println!("{:?}", i)
     }
 
+    let mut s = String::new();
+
+    let data = "initial contents";
+
+    s = data.to_string();
+    
+    let s = String::from("initial contents");
+    let mut s = String::from("foo");
+    s.push_str("bar");
 }
