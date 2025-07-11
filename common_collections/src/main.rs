@@ -75,7 +75,15 @@ fn main() {
     let s3 = String::from("toe");
 
     let s4 = format!("{s1}-{s2}-{s3}");
-    println!("{}", s4)
+    println!("{}", s4);
+
+    for c in "phelipe".chars()  {
+        println!("{c}")
+    }
+
+    for b in "lucas".bytes()  {
+        println!("{b}");
+    }
 
 
 }
