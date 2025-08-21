@@ -23,5 +23,8 @@ fn main() {
 
     // field_name and field_value are invalid at this point
     // println!("{}", field_name); borrow of moved value: `field_name`
+
+    map.insert(String::from("Hated color"), String::from("Blue"));
+    map.insert(String::from("Hated color"), String::from("Green"));
 }
 
